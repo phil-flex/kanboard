@@ -19,6 +19,7 @@
         <?= $this->asset->customCss() ?>
 
         <?php if (! isset($not_editable)): ?>
+            <?= $this->asset->js('assets/js/jquery.min.js') ?> <!--HACK: For Electron Apps-->
             <?= $this->asset->js('assets/js/vendor.min.js') ?>
             <?= $this->asset->js('assets/js/app.min.js') ?>
         <?php endif ?>
