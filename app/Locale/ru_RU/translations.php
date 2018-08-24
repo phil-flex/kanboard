@@ -1,8 +1,8 @@
 <?php
 
 return array(
-    // 'number.decimals_separator' => '',
-    // 'number.thousands_separator' => '',
+    'number.decimals_separator' => ',',
+    'number.thousands_separator' => ' ',
     'None' => 'Отсутствует',
     'Edit' => 'Изменить',
     'Remove' => 'Удалить',
@@ -56,8 +56,8 @@ return array(
     'Inactive' => 'Неактивен',
     'Active' => 'Активен',
     'Unable to update this board.' => 'Не удалось обновить эту доску.',
-    'Disable' => 'Выключить проект',
-    'Enable' => 'Включить проект',
+    'Disable' => 'Отключить',
+    'Enable' => 'Включить',
     'New project' => 'Новый проект',
     'Do you really want to remove this project: "%s"?' => 'Вы точно хотите удалить проект: "%s"?',
     'Remove project' => 'Удалить проект',
@@ -1241,7 +1241,7 @@ return array(
     'This username is already taken' => 'Это имя пользователя занято',
     'A link to reset your password has been sent by email.' => 'Ссылка для сброса пароля была отправлена на ваш e-mail.',
     'Your profile must have a valid email address.' => 'В вашем профиле должен быть указан корректный адрес e-mail.',
-    'Unfortunately, we are unable to reset your password. Did you entered a valid username? Do you have an email address in your profile?' => 'К сожалению, мы не смогли сбросить Ваш пароль. Возможно, Вы ошиблись при вводе имени пользователя или к аккаунту не привязан e-mail адрес.',
+    'Unfortunately, we are unable to reset your password. Did you enter a valid username? Do you have an email address in your profile?' => 'К сожалению, мы не смогли сбросить Ваш пароль. Возможно, Вы ошиблись при вводе имени пользователя или к аккаунту не привязан e-mail адрес.',
     'TRL - Turkish Lira' => 'TRL - Турецкая лира',
     'The project email is optional and could be used by several plugins.' => 'E-mail проекта является необязательным атрибутом и может быть использован некоторыми плагинами',
     'The project email must be unique across all projects' => 'E-mail проекта должен быть уникальным для каждого проекта',
@@ -1379,8 +1379,8 @@ return array(
     'Unselect All' => 'Снять выделение со всех',
     'Apply action' => 'Применить действие',
     'Move selected tasks to another column' => 'Переместить выбранные задачи в другую колонку',
-    // 'Edit tasks in bulk' => '',
-    // 'Choose the properties that you would like to change for the selected tasks.' => '',
-    // 'Configure this project' => '',
-    // 'Start now' => '',
+    'Edit tasks in bulk' => 'Пакетное редактирование задач',
+    'Choose the properties that you would like to change for the selected tasks.' => 'Выберите свойства, которые вы хотите изменить для выбранных задач',
+    'Configure this project' => 'Настроить этот проект',
+    'Start now' => 'Начать сейчас',
 );
