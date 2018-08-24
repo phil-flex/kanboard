@@ -8,7 +8,17 @@ use PDO;
 use Kanboard\Core\Security\Token;
 use Kanboard\Core\Security\Role;
 
-const VERSION = 131;
+const VERSION = 133;
+
+function version_133(PDO $pdo)
+{
+    $pdo->exec('ALTER TABLE `tags` ADD COLUMN `color_id` VARCHAR(50) DEFAULT NULL');
+}
+
+function version_132(PDO $pdo)
+{
+    $pdo->exec('ALTER TABLE `project_has_categories` ADD COLUMN `color_id` VARCHAR(50) DEFAULT NULL');
+}
 
 function version_131(PDO $pdo)
 {
