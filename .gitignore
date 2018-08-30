@@ -15,6 +15,7 @@ Thumbs.db
 *.out
 *.log
 .vagrant
+data/*
 data/files
 data/cache
 data/config.php
