@@ -5,12 +5,12 @@ namespace Kanboard\Action;
 use Kanboard\Model\TaskModel;
 
 /**
- * Close automatically a task after inactive and in a defined column
+ * Assign a category when the task is moved to a specific swimlane
  *
  * @package Kanboard\Action
- * @author  Frederic Guillot
+ * @author  @Interleaved
  */
-class TaskCloseNoActivityColumn extends Base
+class TaskAssignCategorySwimlaneChange extends Base
 {
     /**
      * Get automatic action description
@@ -20,7 +20,7 @@ class TaskCloseNoActivityColumn extends Base
      */
     public function getDescription()
     {
-        return t('Close a task when there is no activity in a specific column');
+        return t('Assign a category when the task is moved to a specific swimlane');
     }
 
     /**
@@ -31,7 +31,10 @@ class TaskCloseNoActivityColumn extends Base
      */
     public function getCompatibleEvents()
     {
-        return array(TaskModel::EVENT_DAILY_CRONJOB);
+        return array(
+            TaskModel::EVENT_CREATE,
+            TaskModel::EVENT_MOVE_SWIMLANE,
+        );
     }
 
     /**
@@ -43,8 +46,8 @@ class TaskCloseNoActivityColumn extends Base
     public function getActionRequiredParameters()
     {
         return array(
-            'duration' => t('Duration in days'),
-            'column_id' => t('Column')
+            'swimlane_id' => t('Swimlane'),
+            'category_id' => t('Category'),
         );
     }
 
@@ -56,11 +59,17 @@ class TaskCloseNoActivityColumn extends Base
      */
     public function getEventRequiredParameters()
     {
-        return array('tasks');
+        return array(
+            'task_id',
+            'task' => array(
+                'project_id',
+                'swimlane_id',
+            )
+        );
     }
 
     /**
-     * Execute the action (close the task)
+     * Execute the action (set the task category)
      *
      * @access public
      * @param  array   $data   Event data dictionary
@@ -68,18 +77,12 @@ class TaskCloseNoActivityColumn extends Base
      */
     public function doAction(array $data)
     {
-        $results = array();
-        $max = $this->getParam('duration') * 86400;
+        $values = array(
+            'id' => $data['task_id'],
+            'category_id' => $this->getParam('category_id'),
+        );
 
-        foreach ($data['tasks'] as $task) {
-            $duration = time() - $task['date_modification'];
-
-            if ($duration > $max && $task['column_id'] == $this->getParam('column_id')) {
-                $results[] = $this->taskStatusModel->close($task['id']);
-            }
-        }
-
-        return in_array(true, $results, true);
+        return $this->taskModificationModel->update($values, false);
     }
 
     /**
@@ -91,6 +94,6 @@ class TaskCloseNoActivityColumn extends Base
      */
     public function hasRequiredCondition(array $data)
     {
-        return count($data['tasks']) > 0;
+        return $data['task']['swimlane_id'] == $this->getParam('swimlane_id');
     }
 }
