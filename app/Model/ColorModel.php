@@ -24,10 +24,20 @@ class ColorModel extends Base
             'background' => 'rgb(245, 247, 196)',
             'border' => 'rgb(223, 227, 45)',
         ),
+        'yellowgreen' => array(
+            'name' => 'YellowGreen',
+            'background' => '#9ACD32',
+            'border' => '#9BCE34',
+        ),
         'blue' => array(
             'name' => 'Blue',
             'background' => 'rgb(219, 235, 255)',
             'border' => 'rgb(168, 207, 255)',
+        ),
+        'skyblue' => array(
+            'name' => 'SkyBlue',
+            'background' => '#87CEEB',
+            'border' => '#70abc3',
         ),
         'green' => array(
             'name' => 'Green',
@@ -71,7 +81,7 @@ class ColorModel extends Base
         ),
         'pink' => array(
             'name' => 'Pink',
-            'background' => '#f48fb1',
+            'background' => '#ff69b4',
             'border' => '#d81b60',
         ),
         'teal' => array(
@@ -98,6 +108,16 @@ class ColorModel extends Base
             'name' => 'Amber',
             'background' => '#ffe082',
             'border' => '#ffa000',
+        ),
+        'tomato' => array(
+            'name' => 'Tomato',
+            'background' => '#FF6347',
+            'border' => '#d81b60',
+        ),
+        'tomato' => array(
+            'name' => 'Tomato',
+            'background' => '#FF6347',
+            'border' => '#d81b60',
         ),
     );
 
