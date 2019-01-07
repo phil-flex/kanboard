@@ -951,7 +951,7 @@ return array(
     'Column:' => '欄位：',
     'Position:' => '位置：',
     'Creator:' => '建立者：',
-    'Time estimated:' => '時間已過去：',
+    'Time estimated:' => '預計時間：',
     '%s hours' => '%s 小時',
     'Time spent:' => '時間消耗：',
     'Created:' => '已建立：',
