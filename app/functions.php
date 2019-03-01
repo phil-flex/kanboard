@@ -180,7 +180,7 @@ function build_app_version($ref, $commit_hash)
         return file_get_contents('/version.txt');
     }
 
-    return 'unknown';
+    return 'master.unknown_revision';
 }
 
 /**
