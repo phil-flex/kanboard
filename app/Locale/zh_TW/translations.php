@@ -1431,5 +1431,8 @@ return array(
     'Other Assignees:' => '其他受讓人：',
     'Assigned Group:' => '分配的組：',
     'Relation graph' => '關係圖',
-    'Create PDF' => '創建 PDF'
+    'Create PDF' => '創建 PDF',
+    'month' => '月',
+    'week' => '周',
+    'day' => '日'
 );
