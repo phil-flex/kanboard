@@ -1398,4 +1398,10 @@ return array(
     // 'Reorder this column by assignee and priority (DESC)' => '',
     // 'Reorder this column by assignee (A-Z)' => '',
     // 'Reorder this column by assignee (Z-A)' => '',
+    'Change to Backlog Board' => '更改至積壓板',
+    'Gantt settings' => 'Gantt設置',
+    'Other Assignees:' => '其他受讓人：',
+    'Assigned Group:' => '分配的組：',
+    'Relation graph' => '關係圖',
+    'Create PDF' => '創建 PDF',
 );
