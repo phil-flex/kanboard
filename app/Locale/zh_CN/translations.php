@@ -1425,4 +1425,11 @@ return array(
     // 'Task limit: ' => '',
     // 'Change to global tag' => '',
     // 'Do you really want to make the tag "%s" global?' => '',
+    'Change to Backlog Board' => '更改至积压板',
+    'Gantt Settings' => '甘特图设置',
+    'Gantt' => '甘特图',
+    'Other Assignees:' => '其他受让人：',
+    'Assigned Group:' => '分配的组：',
+    'Relation graph' => '关系图',
+    'Create PDF' => '创建 PDF'
 );
