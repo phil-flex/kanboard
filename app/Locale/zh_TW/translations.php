@@ -1405,4 +1405,7 @@ return array(
     'Assigned Group:' => '分配的組：',
     'Relation graph' => '關係圖',
     'Create PDF' => '創建 PDF',
+    'month' => '月',
+    'week' => '周',
+    'day' => '日',
 );
