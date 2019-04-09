@@ -1398,6 +1398,8 @@ return array(
     // 'Reorder this column by assignee and priority (DESC)' => '',
     // 'Reorder this column by assignee (A-Z)' => '',
     // 'Reorder this column by assignee (Z-A)' => '',
+    // '%s moved the task #%d "%s" to the project "%s"' => '',
+    // 'Task #%d "%s" has been moved to the project "%s"' => '',
     'Change to Backlog Board' => '更改至積壓板',
     'Gantt settings' => '甘特圖設置',
     'Gantt' => '甘特圖',

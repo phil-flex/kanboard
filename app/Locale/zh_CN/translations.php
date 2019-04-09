@@ -1408,4 +1408,6 @@ return array(
     // 'Reorder this column by assignee and priority (DESC)' => '',
     // 'Reorder this column by assignee (A-Z)' => '',
     // 'Reorder this column by assignee (Z-A)' => '',
+    // '%s moved the task #%d "%s" to the project "%s"' => '',
+    // 'Task #%d "%s" has been moved to the project "%s"' => '',
 );
