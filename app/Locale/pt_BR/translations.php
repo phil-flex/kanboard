@@ -1392,4 +1392,12 @@ return array(
     'Destination swimlane' => 'Raia de destino',
     'Assign a category when the task is moved to a specific swimlane' => 'Atribuir uma categoria quando a tarefa for movida para uma raia específica',
     'Move the task to another swimlane when the category is changed' => 'Mover a tarefa para outra raia quando a categoria é alterada',
+    'Reorder this column by priority (ASC)' => 'Reordenar esta coluna por prioridade (crescente)',
+    'Reorder this column by priority (DESC)' => 'Reordenar esta coluna por prioridade (decrescente)',
+    'Reorder this column by assignee and priority (ASC)' => 'Reordenar esta coluna por designado e prioridade (crescente)',
+    'Reorder this column by assignee and priority (DESC)' => 'Reordenar esta coluna por designado e prioridade (decrescente)',
+    'Reorder this column by assignee (A-Z)' => 'Reordenar esta coluna por designado (A-Z)',
+    'Reorder this column by assignee (Z-A)' => 'Reordenar esta coluna por designado (Z-A)',
+    // '%s moved the task #%d "%s" to the project "%s"' => '',
+    // 'Task #%d "%s" has been moved to the project "%s"' => '',
 );
