@@ -31,6 +31,7 @@ class CurrencyModel extends Base
             'USD' => t('USD - US Dollar'),
             'EUR' => t('EUR - Euro'),
             'GBP' => t('GBP - British Pound'),
+            'HKD' => t('HKD - Hongkong Dollar'),
             'CHF' => t('CHF - Swiss Francs'),
             'CAD' => t('CAD - Canadian Dollar'),
             'AUD' => t('AUD - Australian Dollar'),
