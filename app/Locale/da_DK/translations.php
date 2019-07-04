@@ -1398,9 +1398,11 @@ return array(
     'Reorder this column by assignee and priority (DESC)' => 'Sortere denne kolonne efter ansvarlig og prioritet (DESC)',
     'Reorder this column by assignee (A-Z)' => 'Sortere denne kolonne efter ansvarlig (A-Z)',
     'Reorder this column by assignee (Z-A)' => 'Sortere denne kolonne efter ansvarlig (Z-A)',
+    // 'Reorder this column by due date (ASC)' => '',
+    // 'Reorder this column by due date (DESC)' => '',
     '%s moved the task #%d "%s" to the project "%s"' => '%s flyttede opgave #%d "%s" til projekt "%s"',
     'Task #%d "%s" has been moved to the project "%s"' => 'Opgave #%d "%s" er flyttet til projekt "%s"',
-    'Move the task to another column when due date is less than a certain number of days' => 'Flytte opgave til anden kolonne når afleveringsdato er mindre end et bestemt antal dage',
+    'Move the task to another column when the due date is less than a certain number of days' => 'Flytte opgave til anden kolonne når afleveringsdato er mindre end et bestemt antal dage',
     'HTTP Client:' => 'HTTP klient:',
     'XBT - bitcoin' => 'XBT - bitcoin',
 );
