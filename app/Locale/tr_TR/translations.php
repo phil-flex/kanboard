@@ -662,6 +662,7 @@ return array(
     'Closed tasks' => 'Kapatılmış görevler',
     'Open tasks' => 'Açık görevler',
     'Not assigned' => 'Atanmamış',
+    'Assigned' => 'Atanmış',
     'View advanced search syntax' => 'Gelişmiş arama kodlarını göster',
     'Overview' => 'Özet Görünüm',
     'Board/Calendar/List view' => 'Pano/Takvim/Liste görünümü',
@@ -1403,7 +1404,7 @@ return array(
     // '%s moved the task #%d "%s" to the project "%s"' => '',
     // 'Task #%d "%s" has been moved to the project "%s"' => '',
     // 'Move the task to another column when the due date is less than a certain number of days' => '',
-    // 'Automatically update the start date when task move away from certain column' => '',
+    // 'Automatically update the start date when the task is moved away from a specific column' => '',
     // 'HTTP Client:' => '',
     // 'XBT - bitcoin' => '',
 );
