@@ -1408,4 +1408,7 @@ return array(
     'HTTP Client:' => 'HTTP-Client:',
     'XBT - bitcoin' => 'XBT - Bitcoin:',
     'Assigned' => 'Zugeordnet',
+    'Task limits apply to each swimlane individually' => 'Aufgabenlimit gilt pro Swimlane',
+    'Task limits are applied to each swimlane individually' => 'Aufgabenlimit gilt pro Swimlane',
+    'Task limits are applied across swimlanes' => 'Aufgabenlimit gilt Swimlane übergreifend',
 );
