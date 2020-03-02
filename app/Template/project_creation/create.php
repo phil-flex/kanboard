@@ -14,7 +14,10 @@
         <?= $this->form->text('identifier', $values, $errors, array('autofocus')) ?>
         <p class="form-help"><?= t('The project identifier is optional and must be alphanumeric, example: MYPROJECT.') ?></p>
 
-        <?= $this->form->checkbox('per_swimlane_task_limits', t('Task limits apply to each swimlane individually'), 1, false) ?>
+        <?= $this->form->checkbox('per_swimlane_task_limits', t('Column task limits apply to each swimlane individually'), 1, false) ?>
+
+        <?= $this->form->label(t('Task limit'), 'task_limit') ?>
+        <?= $this->form->number('task_limit', $values, $errors) ?>
 
         <?php if (count($projects_list) > 1): ?>
             <?= $this->form->label(t('Create from another project'), 'src_project_id') ?>
@@ -41,7 +44,7 @@
     </form>
     <?php if ($is_private): ?>
     <div class="alert alert-info">
-        <p><?= t('There is no user management for private projects.') ?></p>
+        <p><?= t('There is no user management for personal projects.') ?></p>
     </div>
     <?php endif ?>
 </section>
