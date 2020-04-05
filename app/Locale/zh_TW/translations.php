@@ -1426,4 +1426,6 @@ return array(
     'week' => '周',
     'day' => '日'
     // 'Group membership(s):' => '',
+    // 'hover mouse over group-icon, to show all group-memberships' => '',
+    // '%s is a member of the following group(s):' => '',
 );
