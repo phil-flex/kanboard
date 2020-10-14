@@ -81,7 +81,7 @@ class ColorModel extends Base
         ),
         'pink' => array(
             'name' => 'Pink',
-            'background' => '#ff69b4',
+            'background' => '#f48fb1',
             'border' => '#d81b60',
         ),
         'teal' => array(

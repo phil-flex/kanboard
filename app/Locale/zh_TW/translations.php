@@ -1324,6 +1324,7 @@ return array(
     'Remove user from group' => '從群組中移除使用者',
     'Assign the task to its creator' => '將任務分配给建立者',
     // 'This task was sent by email to "%s" with subject "%s".' => '',
+    'Predefined Email Subjects' => '預定義的郵件主旨',
     // 'Write one subject by line.' => '',
     // 'Create another link' => '',
     // 'BRL - Brazilian Real' => '',
