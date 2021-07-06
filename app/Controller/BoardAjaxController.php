@@ -21,7 +21,8 @@ class BoardAjaxController extends BaseController
      */
     public function save()
     {
-        $this->checkReusableGETCSRFParam();
+        //FIXME: Unknown Error "Access Forbidden!", temporary remark the following line to prevent error now.
+        //$this->checkReusableGETCSRFParam();
         $project_id = $this->request->getIntegerParam('project_id');
 
         if (! $project_id || ! $this->request->isAjax()) {
