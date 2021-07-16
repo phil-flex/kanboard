@@ -6,7 +6,7 @@
         <?php if (! empty($comment['username'])): ?>
             <strong class="comment-username"><?= $this->text->e($comment['name'] ?: $comment['username']) ?></strong>
         <?php endif ?>
-
+        <i class="fa fa-comments"><?= $comment['id'] ?></i>
         <small class="comment-date"><?= t('Created at:') ?> <?= $this->dt->datetime($comment['date_creation']) ?></small>
         <small class="comment-date"><?= t('Updated at:') ?> <?= $this->dt->datetime($comment['date_modification']) ?></small>
     </div>
