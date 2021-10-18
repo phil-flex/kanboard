@@ -1422,9 +1422,9 @@ return array(
     'Collapse vertically' => '垂直折叠',
     'Expand vertically' => '垂直展开',
     'MXN - Mexican Peso' => '墨西哥比索',
-    // 'Estimated vs actual time per column' => '',
-    // 'HUF - Hungarian Forint' => '',
+    'Estimated vs actual time per column' => '每栏目预计和实际耗时',
+    'HUF - Hungarian Forint' => '匈牙利 - 福林',
     'XBT - Bitcoin' => 'XBT - 比特币',
-    // 'You must select a file to upload as your avatar!' => '',
-    // 'The file you uploaded is not a valid image! (Only *.gif, *.jpg, *.jpeg and *.png are allowed!)' => '',
+    'You must select a file to upload as your avatar!' => '你必须选择一张图片作为你的头像',
+    'The file you uploaded is not a valid image! (Only *.gif, *.jpg, *.jpeg and *.png are allowed!)' => '你所上传的文件不是有效图像！(只有*.gif, *.jpg, *.jpeg and *.png才被允许！)',
 );
