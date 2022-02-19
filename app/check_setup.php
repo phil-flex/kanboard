@@ -6,27 +6,27 @@ if (version_compare(PHP_VERSION, '7.4.0', '<')) {
 }
 
 // Check data folder if sqlite
-if (DB_DRIVER === 'sqlite' && ! is_writable(dirname(DB_FILENAME))) {
-    throw new Exception('The directory "'.dirname(DB_FILENAME).'" must be writeable by your web server user');
+if (DB_DRIVER === 'sqlite' && !is_writable(dirname(DB_FILENAME))) {
+    throw new Exception('The directory "' . dirname(DB_FILENAME) . '" must be writeable by your web server user');
 }
 
 // Check PDO extensions
-if (DB_DRIVER === 'sqlite' && ! extension_loaded('pdo_sqlite')) {
+if (DB_DRIVER === 'sqlite' && !extension_loaded('pdo_sqlite')) {
     throw new Exception('PHP extension required: "pdo_sqlite"');
 }
 
-if (DB_DRIVER === 'mysql' && ! extension_loaded('pdo_mysql')) {
+if (DB_DRIVER === 'mysql' && !extension_loaded('pdo_mysql')) {
     throw new Exception('PHP extension required: "pdo_mysql"');
 }
 
-if (DB_DRIVER === 'postgres' && ! extension_loaded('pdo_pgsql')) {
+if (DB_DRIVER === 'postgres' && !extension_loaded('pdo_pgsql')) {
     throw new Exception('PHP extension required: "pdo_pgsql"');
 }
 
 // Check other extensions
 foreach (array('gd', 'mbstring', 'hash', 'openssl', 'json', 'hash', 'ctype', 'filter', 'session', 'dom', 'filter', 'SimpleXML', 'xml') as $ext) {
-    if (! extension_loaded($ext)) {
-        throw new Exception('This PHP extension is required: "'.$ext.'"');
+    if (!extension_loaded($ext)) {
+        throw new Exception('This PHP extension is required: "' . $ext . '"');
     }
 }
 
