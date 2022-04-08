@@ -1,8 +1,8 @@
 <?php
 
-// PHP 7.2.0 minimum
-if (version_compare(PHP_VERSION, '7.2.0', '<')) {
-    throw new Exception('This software requires PHP 7.2.0 minimum');
+// PHP 7.4.0 minimum
+if (version_compare(PHP_VERSION, '7.4.0', '<')) {
+    throw new Exception('This software requires PHP 7.4.0 minimum');
 }
 
 // Check data folder if sqlite
@@ -33,9 +33,4 @@ foreach (array('gd', 'mbstring', 'hash', 'openssl', 'json', 'hash', 'ctype', 'fi
 // Fix wrong value for arg_separator.output, used by the function http_build_query()
 if (ini_get('arg_separator.output') === '&amp;') {
     ini_set('arg_separator.output', '&');
-}
-
-// Make sure we can read files with "\r", "\r\n" and "\n"
-if (ini_get('auto_detect_line_endings') != 1) {
-    ini_set("auto_detect_line_endings", 1);
 }
