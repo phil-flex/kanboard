@@ -30,12 +30,33 @@
         </li>
         <li>
             <?= $paginator->order(t('Start date'), \Kanboard\Model\TaskModel::TABLE.'.date_started') ?>
+        </li>        
+        <li>
+            <?= $paginator->order(t('Moved date'), \Kanboard\Model\TaskModel::TABLE.'.date_moved') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Creation date'), \Kanboard\Model\TaskModel::TABLE.'.date_creation') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Modification date'), \Kanboard\Model\TaskModel::TABLE.'.date_modification') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Completed date'), \Kanboard\Model\TaskModel::TABLE.'.date_completed') ?>
         </li>
         <li>
             <?= $paginator->order(t('Status'), \Kanboard\Model\TaskModel::TABLE.'.is_active') ?>
         </li>
         <li>
             <?= $paginator->order(t('Reference'), \Kanboard\Model\TaskModel::TABLE.'.reference') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Score'), \Kanboard\Model\TaskModel::TABLE.'.score') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Time spent'), \Kanboard\Model\TaskModel::TABLE.'.time_spent') ?>
+        </li>
+        <li>
+            <?= $paginator->order(t('Time estimated'), \Kanboard\Model\TaskModel::TABLE.'.time_estimated') ?>
         </li>
     </ul>
 </div>

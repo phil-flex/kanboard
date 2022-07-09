@@ -17,7 +17,6 @@
                     'show_items_selection' => true,
                     'redirect' => 'list',
                 )) ?>
-
                 <?= $this->render('task_list/task_details', array(
                     'task' => $task,
                 )) ?>

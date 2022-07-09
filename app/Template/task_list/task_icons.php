@@ -30,6 +30,20 @@
         </span>
     <?php endif ?>
 
+    <?php if (! empty($task['date_creation'])): ?>
+        <span title="<?= t('Creation date') ?>" class="task-date">
+            <i class="fa fa-plus" role="img" aria-label="<?= t('Creation date') ?>"></i>
+            <?= $this->dt->date($task['date_creation']) ?>
+        </span>
+    <?php endif ?>
+
+    <?php if (! empty($task['date_moved'])): ?>
+        <span title="<?= t('Moved date') ?>" class="task-date">
+            <i class="fa fa-arrows" role="img" aria-label="<?= t('Moved date') ?>"></i>
+            <?= $this->dt->date($task['date_moved']) ?>
+        </span>
+    <?php endif ?>
+
     <?php if (! empty($task['date_due'])): ?>
         <span title="<?= t('Due date') ?>" class="task-date
             <?php if (time() > $task['date_due']): ?>
@@ -40,6 +54,13 @@
             ">
             <i class="fa fa-calendar" role="img" aria-label="<?= t('Due date') ?>"></i>
             <?= $this->dt->datetime($task['date_due']) ?>
+        </span>
+    <?php endif ?>
+
+    <?php if (! empty($task['date_completed'])): ?>
+        <span title="<?= t('Completed date') ?>" class="task-date">
+            <i class="fa fa-check-square-o" role="img" aria-label="<?= t('Completed date') ?>"></i>
+            <?= $this->dt->date($task['date_completed']) ?>
         </span>
     <?php endif ?>
 
