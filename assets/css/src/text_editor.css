@@ -19,11 +19,12 @@
     max-width: 99%;
     height: 250px;
     overflow: auto;
-    padding: 2px
+    padding: 2px;
 }
 
 .text-editor textarea {
     width: 700px;
     max-width: 98%;
-    height: 250px
+    height: 250px;
+    font-family: monospace;
 }
