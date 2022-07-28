@@ -68,9 +68,19 @@ class TaskCommentFilter extends BaseFilter implements FilterInterface
      */
     protected function getSubQuery()
     {
-        return $this->db
-            ->table(CommentModel::TABLE)
-            ->columns(CommentModel::TABLE.'.task_id')
-            ->ilike(CommentModel::TABLE.'.comment', '%'.$this->value.'%');
+        if (is_int($this->value) || ctype_digit((string) $this->value)) {
+            return $this->db
+                ->table(CommentModel::TABLE)
+                ->columns(CommentModel::TABLE.'.task_id')
+                ->beginOr()
+                ->eq(CommentModel::TABLE.'.id', $this->value)
+                ->ilike(CommentModel::TABLE.'.comment', '%'.$this->value.'%')
+                ->closeOr();
+        } else {
+             return $this->db
+                ->table(CommentModel::TABLE)
+                ->columns(CommentModel::TABLE.'.task_id')
+                ->ilike(CommentModel::TABLE.'.comment', '%'.$this->value.'%');
+        }
     }
 }
