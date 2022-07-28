@@ -11,7 +11,8 @@ use Kanboard\Model\TaskModel;
  * @package filter
  * @author  Frederic Guillot
  */
-class TaskIdFilter extends BaseFilter implements FilterInterface
+//class TaskIdFilter extends BaseFilter implements FilterInterface
+class TaskIdFilter extends BaseComparisonFilter implements FilterInterface
 {
     /**
      * Get search attribute
@@ -32,7 +33,8 @@ class TaskIdFilter extends BaseFilter implements FilterInterface
      */
     public function apply()
     {
-        $this->query->eq(TaskModel::TABLE.'.id', $this->value);
+        //$this->query->eq(TaskModel::TABLE.'.id', $this->value);
+        $this->applyComparisonFilter(TaskModel::TABLE.'.id');
         return $this;
     }
 }
