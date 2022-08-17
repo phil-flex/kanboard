@@ -26,6 +26,7 @@ class TaskExternalLinkModel extends Base
      * @param  integer $task_id
      * @return array
      */
+
     public function getAll($task_id)
     {
         $types = $this->externalLinkManager->getTypes();
@@ -33,7 +34,7 @@ class TaskExternalLinkModel extends Base
         $links = $this->db->table(self::TABLE)
             ->columns(self::TABLE.'.*', UserModel::TABLE.'.name AS creator_name', UserModel::TABLE.'.username AS creator_username')
             ->eq('task_id', $task_id)
-            ->asc('title')
+            ->asc('date_creation')
             ->join(UserModel::TABLE, 'id', 'creator_id')
             ->findAll();
 
