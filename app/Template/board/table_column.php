@@ -53,6 +53,9 @@
                                     <?= $this->url->icon('sort-alpha-asc', t('Reorder this column by title (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'title', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                 </li>
                                 <li>
+                                    <?= $this->url->icon('sort-alpha-desc', t('Reorder this column by title (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'title', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
+                                </li>
+                                <li>
                                     <?= $this->url->icon('sort-numeric-asc', t('Reorder this column by ID (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'id', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                 </li>
                                 <li>
