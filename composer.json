@@ -58,8 +58,8 @@
         ]
     },
     "require-dev": {
-        "symfony/stopwatch": "5.4.5",
-        "phpunit/phpunit": "9.5.21",
+        "symfony/stopwatch": "5.4.13",
+        "phpunit/phpunit": "9.5.26",
         "roave/security-advisories": "dev-master"
     }
 }

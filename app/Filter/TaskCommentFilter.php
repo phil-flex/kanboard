@@ -68,6 +68,7 @@ class TaskCommentFilter extends BaseFilter implements FilterInterface
      */
     protected function getSubQuery()
     {
+    	//NOTES: Allow > < comparison of id
         if (is_int($this->value) || ctype_digit((string) $this->value)) {
             return $this->db
                 ->table(CommentModel::TABLE)

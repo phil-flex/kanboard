@@ -40,7 +40,7 @@ class CurrencyModel extends Base
             'EUR' => t('EUR - Euro'),
             'GBP' => t('GBP - British Pound'),
             'HKD' => t('HKD - Hongkong Dollar'),
-            'HRK' => t('HRK - Croatian Kuna'),
+            'HRK' => t('HRK - Kuna'),
             'HUF' => t('HUF - Hungarian Forint'),
             'CHF' => t('CHF - Swiss Francs'),
             'CAD' => t('CAD - Canadian Dollar'),

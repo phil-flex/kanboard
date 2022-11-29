@@ -114,11 +114,6 @@ class ColorModel extends Base
             'background' => '#FF6347',
             'border' => '#d81b60',
         ),
-        'tomato' => array(
-            'name' => 'Tomato',
-            'background' => '#FF6347',
-            'border' => '#d81b60',
-        ),
     );
 
     /**
