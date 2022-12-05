@@ -1,4 +1,7 @@
 <section id="task-summary">
+    <div style="position: fixed; bottom: 20px; right: 20px; color: gray;">
+        <?= t('🆔KB#%d', $task['id']) ?>
+    </div>
     <h2><?= $this->text->e($task['title']) ?></h2>
 
     <?= $this->hook->render('template:task:details:top', array('task' => $task)) ?>
