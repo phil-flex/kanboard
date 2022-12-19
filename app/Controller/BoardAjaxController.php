@@ -21,8 +21,6 @@ class BoardAjaxController extends BaseController
      */
     public function save()
     {
-        //FIXME: Unknown Error "Access Forbidden!", temporary remark the following line to prevent error now.
-        //FIXME: If installed Backlog plugin, the following line of checking will fail.
         $this->checkReusableGETCSRFParam();
         $project_id = $this->request->getIntegerParam('project_id');
 

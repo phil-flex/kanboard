@@ -2,7 +2,7 @@
     <div style="position: fixed; bottom: 20px; right: 20px; color: gray;">
         <?= t('🆔KB#%d', $task['id']) ?>
     </div>
-    <h2><span style="border-radius: 5px 5px 5px 5px; background: #cccccc; padding: 3px"><?= t('KB#%d', $task['id']) ?><span style="font-color: #cccccc;color: #cccccc">:</span></span><?= $this->text->e($task['title']) ?></h2>
+    <h2><span style="border-radius: 5px 5px 5px 5px; background: #cccccc; padding: 3px"><?= t('KB#%d', $task['id']) ?><span style="font-color: #cccccc;color: #cccccc">:</span></span>&nbsp;<?= $this->text->e($task['title']) ?></h2>
 
     <?= $this->hook->render('template:task:details:top', array('task' => $task)) ?>
 

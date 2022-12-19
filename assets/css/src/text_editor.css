@@ -25,6 +25,6 @@
 .text-editor textarea {
     width: 700px;
     max-width: 98%;
-    height: 250px;
+    height: 300px;
     font-family: monospace;
 }
