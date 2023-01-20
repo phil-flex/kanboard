@@ -36,5 +36,6 @@
 
 .avatar-letter {
     color: var(--avatar-color-letter);
-    text-align: center
+    text-align: center;
+    white-space: nowrap;
 }
