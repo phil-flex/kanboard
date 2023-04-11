@@ -44,11 +44,14 @@
 
                             <?php if ($column['nb_tasks'] > 0 && $this->projectRole->canChangeTaskStatusInColumn($column['project_id'], $column['id'])): ?>
                                 <li>
-                                    <?= $this->modal->confirm('close', t('Close all tasks of this column'), 'BoardPopoverController', 'confirmCloseColumnTasks', array('project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id'])) ?>
+                                    <?= $this->modal->confirm('close', t('Close all tasks in this column and this swimlane'), 'BoardPopoverController', 'confirmCloseColumnTasks', array('project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id'])) ?>
                                 </li>
                             <?php endif ?>
-
-                            <?php if ($column['nb_tasks'] > 0 && $this->user->hasProjectAccess('TaskModificationController', 'update', $column['project_id'])): ?>
+                        </ul>
+                        <?php if ($column['nb_tasks'] > 0 && $this->user->hasProjectAccess('TaskModificationController', 'update', $column['project_id'])): ?>
+                            <span class="dropdown">
+                                <a href="#" class="dropdown-menu"><i class="fa fa-sort"></i></i></a>
+                                <ul>
                                 <li>
                                     <?= $this->url->icon('sort-alpha-asc', t('Reorder this column by title (ASC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'title', 'direction' => 'asc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                 </li>
@@ -97,10 +100,11 @@
                                 <li>
                                     <?= $this->url->icon('sort-numeric-desc', t('Reorder this column by due date (DESC)'), 'TaskReorderController', 'reorderColumn', ['sort' => 'due-date', 'direction' => 'desc', 'project_id' => $column['project_id'], 'column_id' => $column['id'], 'swimlane_id' => $swimlane['id']]) ?>
                                 </li>
-                            <?php endif ?>
+                                </ul>
+                            </span>
+                        <?php endif ?>
 
-                            <?= $this->hook->render('template:board:column:dropdown', array('swimlane' => $swimlane, 'column' => $column)) ?>
-                        </ul>
+                        <?= $this->hook->render('template:board:column:dropdown', array('swimlane' => $swimlane, 'column' => $column)) ?>
                     </span>
                 <?php endif ?>
             </span>
@@ -123,17 +127,17 @@
                 <?php endif ?>
             </span>
 
-            <?php if (! empty($column['column_nb_tasks'])): ?>
+            <?php if (! empty($column['nb_tasks'])): ?>
             <span title="<?= t('Task count') ?>" class="board-column-header-task-count">
-                <span><span class="ui-helper-hidden-accessible"><?= t('Task count') ?> </span><?= $column['column_nb_tasks'] ?></span>
+                <span><span class="ui-helper-hidden-accessible"><?= t('Task count') ?> </span><?= $column['nb_tasks'] ?></span>
             </span>
             <?php endif ?>
-            <?php if (! empty($column['column_nb_open_tasks'])): ?>
+            <?php if (! empty($column['column_nb_tasks'])): ?>
             <span title="<?= t('Total number of tasks in this column across all swimlanes') ?>" class="board-column-header-task-count">
                 <?php if ($column['task_limit'] > 0): ?>
-                    (<span><span class="ui-helper-hidden-accessible"><?= t('Total number of tasks in this column across all swimlanes') ?> </span><?= $column['column_nb_open_tasks'] ?></span> / <span title="<?= t('Task limit') ?>"><span class="ui-helper-hidden-accessible"><?= t('Task limit') ?> </span><?= $this->text->e($column['task_limit']) ?></span>)
+                    (<span><span class="ui-helper-hidden-accessible"><?= t('Total number of tasks in this column across all swimlanes') ?> </span><?= $column['column_nb_tasks'] ?></span> / <span title="<?= t('Task limit') ?>"><span class="ui-helper-hidden-accessible"><?= t('Task limit') ?> </span><?= $this->text->e($column['task_limit']) ?></span>)
                 <?php else: ?>
-                    (<span><span class="ui-helper-hidden-accessible"><?= t('Total number of tasks in this column across all swimlanes') ?> </span><?= $column['column_nb_open_tasks'] ?></span>)
+                    (<span><span class="ui-helper-hidden-accessible"><?= t('Total number of tasks in this column across all swimlanes') ?> </span><?= $column['column_nb_tasks'] ?></span>)
                 <?php endif ?>
             </span>
             <?php endif ?>
