@@ -1,8 +1,9 @@
 (function () {
     var isOpen = false;
+    var isFormDirty = false;
 
     function onOverlayClick(e) {
-        if (e.target.matches('#modal-overlay')) {
+        if (e.target.matches('#modal-overlay') && isFormDirty === false) {
             e.stopPropagation();
             e.preventDefault();
             destroy();
@@ -11,6 +12,10 @@
 
     function onCloseButtonClick() {
         KB.trigger('modal.close');
+    }
+
+    function onFormChange() {
+        isFormDirty = true;
     }
 
     function onFormSubmit() {
@@ -51,6 +56,7 @@
     function afterRendering() {
         var formElement = KB.find('#modal-content form');
         if (formElement) {
+            formElement.on('change', onFormChange, false);
             formElement.on('submit', onFormSubmit, false);
         }
 
@@ -122,6 +128,7 @@
 
     function destroy() {
         isOpen = false;
+        isFormDirty = false;
         var overlayElement = KB.find('#modal-overlay');
 
         if (overlayElement) {

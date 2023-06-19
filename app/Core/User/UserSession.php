@@ -44,6 +44,11 @@ class UserSession extends Base
         $user['is_ldap_user'] = isset($user['is_ldap_user']) ? (bool) $user['is_ldap_user'] : false;
         $user['twofactor_activated'] = isset($user['twofactor_activated']) ? (bool) $user['twofactor_activated'] : false;
 
+        if (session_status() === PHP_SESSION_ACTIVE) {
+            // Note: Do not delete the old session to avoid possible race condition and a PHP warning.
+            session_regenerate_id(false);
+        }
+
         session_set('user', $user);
         session_set('postAuthenticationValidated', false);
     }
@@ -189,6 +194,27 @@ class UserSession extends Base
         }
 
         return session_get('user')['timezone'];
+    }
+
+    /**
+     * Get user theme
+     *
+     * @access public
+     * @return string
+     */
+    public function getTheme()
+    {
+        if (! $this->isLogged()) {
+            return 'light';
+        }
+
+        $user_session = session_get('user');
+
+        if (array_key_exists('theme', $user_session)) {
+            return $user_session['theme'];
+        }
+
+        return 'light';
     }
 
     /**

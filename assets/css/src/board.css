@@ -60,7 +60,7 @@
 
 td.board-column-task-collapsed {
     font-weight: bold;
-    background-color: #fbfbfb
+    background-color: var(--table-header-background-color)
 }
 
 #board th.board-column-header-collapsed {
@@ -152,8 +152,8 @@ a.board-swimlane-toggle:focus {
 }
 
 .draggable-placeholder {
-    border: 2px dashed #000;
-    background: #fafafa;
+    border: 2px dashed var(--draggable-placeholder-border-color);
+    background: var(--draggable-placeholder-background-color);
     height: 70px;
     margin-bottom: 10px
 }
