@@ -168,8 +168,10 @@ KB.component('suggest-menu', function(containerElement, options) {
         }
 
         for (var i = 0; i < items.length; i++) {
-            if (items[i].value.toLowerCase().indexOf(text.toLowerCase()) === 0) {
-                filteredItems.push(items[i]);
+            if (items[i].value != undefined) {
+                if (items[i].value.toLowerCase().indexOf(text.toLowerCase()) === 0) {
+                    filteredItems.push(items[i]);
+                }
             }
         }
 
