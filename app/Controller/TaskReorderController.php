@@ -35,6 +35,7 @@ class TaskReorderController extends BaseController
             case 'due-date':
                 $this->taskReorderModel->reorderByDueDate($project['id'], $swimlaneID, $columnID, $direction);
                 break;
+            //multiple $sort function in default, $sort must be the column name of the tasks table
             default:
                 $this->taskReorderModel->reorderBy($project['id'], $swimlaneID, $columnID, $direction, $sort);
                 break;
