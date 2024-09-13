@@ -1451,6 +1451,7 @@ return array(
     // '%s wrote: ' => '',
     // 'Number of visible tasks in this column and swimlane' => '',
     // 'Number of tasks in this swimlane' => '',
+    // 'Unable to find another subtask in progress, you can close this window.' => '',
     'Change to Backlog Board' => '更改至積壓板',
     'Gantt settings' => '甘特圖設置',
     'Gantt' => '甘特圖',

@@ -5,9 +5,13 @@
 
     <?= $this->form->csrf() ?>
 
+    <?php if (empty($subtask_inprogress)): ?>
+        <p><?= t('Unable to find another subtask in progress, you can close this window.') ?></p>
+    <?php else: ?>
     <p><?= t('Select the new status of the subtask: "%s"', $subtask_inprogress['title']) ?></p>
     <?= $this->form->radios('status', $status_list) ?>
     <?= $this->form->hidden('id', $subtask_inprogress) ?>
+    <?php endif ?>
 
     <?= $this->modal->submitButtons() ?>
 </form>

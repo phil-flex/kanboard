@@ -1,7 +1,11 @@
 KB.onClick('.js-reply-to-comment, .fa-reply', function (e) {
     var commentId = parseInt($(e.target).parents('li[data-comment-id]').attr('data-comment-id'));
 
-    var commentTextContent = document.querySelector('#comment-' + commentId + ' .reply-content').textContent;
+    var commentReplyTemplate = document.querySelector('#comment-reply-content-' + commentId);
+    if (! commentReplyTemplate) {
+        return false;
+    }
+    var commentTextContent = commentReplyTemplate.content.querySelector("textarea").textContent;
 
     var textarea = document.querySelector(".text-editor textarea[name=comment]");
     textarea.value += commentTextContent + '\n\n';
@@ -33,7 +37,7 @@ KB.onClick('.js-reply-to-comment, .fa-reply', function (e) {
         console.error('Could not find the preview button');
         return false;
     }
-
     $previewButton[0].click();
+
     return false;
 });
